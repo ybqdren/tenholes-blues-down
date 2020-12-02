@@ -82,7 +82,7 @@ public class SpiderMain{
 		httpGet.setHeader("User-Agent", prop.getProperty("User-Agent"));
 		
 		String recContent = EntityUtils.toString(httpClient.execute(httpGet).getEntity(),"UTF-8");			
-		while (page<21) {
+		while (page<22) {
 			url = "http://m.tenholes.com/tabs/clist/";
 			content = getSecondPagePage(recContent,httpClient,url,num,page);
 			urList = RourceParseUtil.getPageUrlList(content);
@@ -138,7 +138,6 @@ public class SpiderMain{
 		EntityUtils.consume(httpEntity);
 		return result;
 	}
-	
 	
 	/**
 	 * 测试功能
@@ -198,7 +197,7 @@ public class SpiderMain{
         	EntityUtils.consume(httpEntity);
             return "0";
         }else{
-    		String name = imageMap.get("id")+"-"+(imageMap.get("name").contains("/")?imageMap.get("name").replaceAll("/+", "|"):imageMap.get("name"));
+    		String name = imageMap.get("id")+"-"+(imageMap.get("name").contains("/")?imageMap.get("name").replaceAll("/+", "-"):imageMap.get("name"));
     		
     		// 创建文件根目录
     		File rootDir = new File(rootPath+"/"+name+"/");
@@ -236,22 +235,24 @@ public class SpiderMain{
     		HttpURLConnection  httpsURLConn = (HttpURLConnection) url_instance.openConnection();
     		httpsURLConn.setRequestProperty("Cookie", prop.getProperty("Cookie"));
     		httpsURLConn.setRequestProperty("User-Agent", prop.getProperty("User-Agent"));
-    		httpsURLConn.connect();
-    		file_audio = new File(rootDir+"/"+name+".mp3");
-    		if(file_audio.exists()){
-    			file_audio.delete();
+    		if("200".equals(httpsURLConn.getResponseCode())){
+        		httpsURLConn.connect();
+        		file_audio = new File(rootDir+"/"+name+".mp3");
+        		if(file_audio.exists()){
+        			file_audio.delete();
+        		}
+        		BufferedInputStream bw_audio = new BufferedInputStream(httpsURLConn.getInputStream());
+        		FileOutputStream fos = new FileOutputStream(file_audio);
+        		byt = new byte[1024*8];
+        		int size = 0;
+        		while ((size = bw_audio.read(byt))!=-1) {
+        			fos.write(byt,0,size);
+        		}
+        		fos.flush();
+        		fos.close();
+        		bw_audio.close();
+        		httpsURLConn.disconnect();	
     		}
-    		BufferedInputStream bw_audio = new BufferedInputStream(httpsURLConn.getInputStream());
-    		FileOutputStream fos = new FileOutputStream(file_audio);
-    		byt = new byte[1024*8];
-    		int size = 0;
-    		while ((size = bw_audio.read(byt))!=-1) {
-    			fos.write(byt,0,size);
-    		}
-    		fos.flush();
-    		fos.close();
-    		bw_audio.close();
-    		httpsURLConn.disconnect();	
         }
 		EntityUtils.consume(httpEntity);
 		return "200";
