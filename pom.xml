@@ -5,7 +5,7 @@
   <artifactId>tenholes-blues-down</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>KqSpider Maven Webapp</name>
+  <name>tenholes-blues-down Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
   
@@ -44,6 +44,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>KqSpider</finalName>
+    <finalName>tenholes-blues-down</finalName>
   </build>
 </project>
