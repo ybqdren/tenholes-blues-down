@@ -1,12 +1,12 @@
 # tenholes-blues-down
 
-Java下载蓝调口琴网（http://www.tenholes.com）蓝调口琴琴谱、伴奏资源
+Java下载蓝调口琴网（[http://www.tenholes.com](http://www.tenholes.com)）蓝调口琴琴谱、伴奏资源
 
 <br>
 
 <br>
 
-代码匆忙很粗糙，异常准备之后统一处理，暂时不影响使用
+代码匆忙完成很粗糙，异常准备之后统一处理，暂时不影响使用
 
 尊重版权，使用这个爬虫需要自己有会员权限的账号!!
 
@@ -41,3 +41,4 @@ Java下载蓝调口琴网（http://www.tenholes.com）蓝调口琴琴谱、伴�
 2.在userConfig.properties文件中填入Cookie
 
 3.运行SpiderMan.java
+![运行截图](https://s3.ax1x.com/2021/01/24/sbRJC8.png)

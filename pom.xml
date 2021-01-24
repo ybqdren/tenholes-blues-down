@@ -10,12 +10,12 @@
   <dependencies>
   
   	<!-- 单元测试 -->
-<!--     <dependency>
+     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.13</version>
       <scope>test</scope>
-    </dependency> -->
+    </dependency>
 
 	<!-- 日志 -->  
     <dependency>
@@ -42,6 +42,12 @@
         <artifactId>fastjson</artifactId>
         <version>1.2.4</version>
     </dependency>
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>4.12</version>
+          <scope>test</scope>
+      </dependency>
   </dependencies>
   <build>
     <finalName>tenholes-blues-down</finalName>

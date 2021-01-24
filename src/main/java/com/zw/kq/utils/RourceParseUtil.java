@@ -30,7 +30,8 @@ public class RourceParseUtil {
 		String result = document.select("div.mt-con").text();
 		return result;
 	}
-	
+
+
 	/**
 	 * 提取页面中的所有曲谱连接
 	 * @param content 页面内容

@@ -1,25 +1,7 @@
-package com.zw.kq.main;
+package com.zw.kq;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
-
-import org.apache.http.Consts;
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.ParseException;
+import com.zw.kq.utils.RourceParseUtil;
+import org.apache.http.*;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -35,14 +17,18 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import com.zw.kq.utils.RourceParseUtil;
+import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.nio.charset.Charset;
+import java.util.*;
 
 /**
  * Created by ZhaoWen on 2020年11月28日
  * http://www.tenholes.com/ 蓝调口琴网
  */
 
-public class SpiderMain{
+public class SpiderMain {
 	static Properties prop = null;
 	static String rootPath = null;
 	static File rootDir = null;
@@ -64,7 +50,7 @@ public class SpiderMain{
 	/**
 	 * 单线程-运行爬虫
 	 * @param url
-	 * @param flag
+	 * @param
 	 * @return
 	 * @throws ParseException
 	 * @throws IOException
@@ -82,7 +68,8 @@ public class SpiderMain{
 		httpGet.setHeader("User-Agent", prop.getProperty("User-Agent"));
 		
 		String recContent = EntityUtils.toString(httpClient.execute(httpGet).getEntity(),"UTF-8");			
-		while (page<22) {
+//		while (page<22) {
+		while (page<2) {
 			url = "http://m.tenholes.com/tabs/clist/";
 			content = getSecondPagePage(recContent,httpClient,url,num,page);
 			urList = RourceParseUtil.getPageUrlList(content);
@@ -171,13 +158,14 @@ public class SpiderMain{
 			
 		}
 	}
-	
+
 	/**
 	 * 下载图片（口琴谱）和音频
-	 * @param response 网页响应对象
+	 * @param httpClient
+	 * @param httpGet
 	 * @return 状态码 200表示一次操作完成
-	 * @throws IOException 
-	 * @throws ParseException 
+	 * @throws ParseException
+	 * @throws IOException
 	 */
 	public static String downFile(HttpClient httpClient,HttpGet httpGet) throws ParseException, IOException{
 		HttpResponse response = httpClient.execute(httpGet);
@@ -235,7 +223,7 @@ public class SpiderMain{
     		HttpURLConnection  httpsURLConn = (HttpURLConnection) url_instance.openConnection();
     		httpsURLConn.setRequestProperty("Cookie", prop.getProperty("Cookie"));
     		httpsURLConn.setRequestProperty("User-Agent", prop.getProperty("User-Agent"));
-    		if("200".equals(httpsURLConn.getResponseCode())){
+    		if(200 == httpsURLConn.getResponseCode()){
         		httpsURLConn.connect();
         		file_audio = new File(rootDir+"/"+name+".mp3");
         		if(file_audio.exists()){
