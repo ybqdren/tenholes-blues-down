@@ -16,19 +16,22 @@ Java下载蓝调口琴网（[http://www.tenholes.com](http://www.tenholes.com)�
 
 ## 功能
 
-### 已实现
+~~1.蓝调口琴谱图片下载保存~~
 
-1.蓝调口琴谱图片下载保存
+~~2.蓝调口琴伴奏下载保存~~
 
-2.蓝调口琴伴奏下载保存
+3.蓝调口琴教程html文件爬取保存
+
+4.多线程架构构建
 
 <br>
 
-### 待补充
+<br>
 
-1.蓝调口琴教程html文件爬取保存
+## 维护日志
+2021/01/24 修复伴奏音频不能下载问题  
 
-2.多线程架构构建
+2020/12/02 push到github
 
 <br>
 
@@ -41,4 +44,4 @@ Java下载蓝调口琴网（[http://www.tenholes.com](http://www.tenholes.com)�
 2.在userConfig.properties文件中填入Cookie
 
 3.运行SpiderMan.java
-![运行截图](https://s3.ax1x.com/2021/01/24/sbRJC8.png)
+<img src="https://s3.ax1x.com/2021/01/24/sbRJC8.png"></img>
