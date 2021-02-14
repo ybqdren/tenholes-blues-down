@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.zw.kq.model.PageUrlModel;
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
@@ -27,7 +28,7 @@ public class RourceParseUtil {
 	 */
 	public static String getPageTotural(String content){
 		Document document = Jsoup.parse(content);
-		String result = document.select("div.mt-con").text();
+		String result = document.select("mt-con").text();
 		return result;
 	}
 
@@ -89,6 +90,7 @@ public class RourceParseUtil {
 		Elements category = null;
 		Elements audio = null;
 		Map<String,String> imageMap = new HashMap();
+		PageUrlModel pageUrlModel = new PageUrlModel();
 		Document document = Jsoup.parse(content);
 		
 		//获取曲谱编号
@@ -100,7 +102,13 @@ public class RourceParseUtil {
 		imageName = document.getElementsByClass("mci-left").select("h3.ellipsis");
 		// 获取音频伴奏地址
 		audio = document.select("div.audio-opera a");
-		
+
+		pageUrlModel.setId(id.attr("data-specId"));
+		pageUrlModel.setName(category.text()+"-"+imageName.text());
+		pageUrlModel.setUrl(imageUrl.attr("src"));
+		pageUrlModel.setAudioUrl("http://m.tenholes.com"+audio.attr("href"));
+
+
 		imageMap.put("id", id.attr("data-specId"));
 		imageMap.put("name",category.text()+"-"+imageName.text());
 		imageMap.put("url", imageUrl.attr("src"));

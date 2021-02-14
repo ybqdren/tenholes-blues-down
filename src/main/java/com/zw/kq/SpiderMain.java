@@ -287,22 +287,22 @@ public class SpiderMain {
 		content = EntityUtils.toString(httpEntity,Charset.forName("utf-8"));
 		imageMap = RourceParseUtil.getInfo(content);
 		content = RourceParseUtil.getPageTotural(content);
-
-        if(imageMap.get("id")==null || "".equals(imageMap.get("id"))){
-        	EntityUtils.consume(httpEntity);
-            return "0";
-        }
-
-		String name = imageMap.get("id")+"-"+(imageMap.get("name").contains("/")?imageMap.get("name").replaceAll("/+", "-"):imageMap.get("name"));
-		String filePathString = rootDir+"/"+name+"/";
-        // 创建文件根目录
-		createRootDir(name);
-		// 获取到当前图片的地址 并重新发送请求
-		url = imageMap.get("url");
-		downImge(name,url,filePathString,httpClient);
-		// 获取当前音频的地址 进行请求
-		url = imageMap.get("audio");
-		downAudio(name,url,filePathString);
+		System.out.println("+======>"+content);
+//        if(imageMap.get("id")==null || "".equals(imageMap.get("id"))){
+//        	EntityUtils.consume(httpEntity);
+//            return "0";
+//        }
+//
+//		String name = imageMap.get("id")+"-"+(imageMap.get("name").contains("/")?imageMap.get("name").replaceAll("/+", "-"):imageMap.get("name"));
+//		String filePathString = rootDir+"/"+name+"/";
+//        // 创建文件根目录
+//		createRootDir(name);
+//		// 获取到当前图片的地址 并重新发送请求
+//		url = imageMap.get("url");
+//		downImge(name,url,filePathString,httpClient);
+//		// 获取当前音频的地址 进行请求
+//		url = imageMap.get("audio");
+//		downAudio(name,url,filePathString);
 		// 获取教程信息
 		return "200";
 	}
