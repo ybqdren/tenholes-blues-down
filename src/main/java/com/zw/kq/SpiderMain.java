@@ -69,8 +69,7 @@ public class SpiderMain {
 		httpGet.setHeader("User-Agent", prop.getProperty("User-Agent"));
 		
 		String recContent = EntityUtils.toString(httpClient.execute(httpGet).getEntity(),"UTF-8");			
-//		while (page<22) {
-		while (page<2) {
+		while (page<22) {
 			url = "http://m.tenholes.com/tabs/clist/";
 			content = getSecondPagePage(recContent,httpClient,url,num,page);
 			urList = RourceParseUtil.getPageUrlList(content);
