@@ -19,6 +19,7 @@ import org.jsoup.select.Elements;
 
 import java.io.*;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.*;
@@ -141,10 +142,9 @@ public class SpiderMain {
 				HttpEntity httpEntity = response.getEntity();
 				String entiry = EntityUtils.toString(httpEntity, Charset.forName("utf-8"));
 				Map<String,String> map = RourceParseUtil.getInfo(entiry);
-				Set key = map.keySet();
-				for (Object k : key) {
-					System.out.println(k+"-->"+map.get(k));
-				}
+				map.forEach((k,v) ->
+						System.out.println(k+"-->"+v)
+				);
 			}
 		}else if("2".equals(code)){
 			HttpResponse response = httpClient.execute(httpGet);
@@ -156,6 +156,114 @@ public class SpiderMain {
 				}
 			}
 			
+		}
+	}
+
+
+	public static void saveFile(){
+
+	}
+
+
+	/**
+	 * 判断文件/文件夹是否存在
+	 * @param file
+	 * @return
+	 */
+/*	public static Boolean isExists(File file){
+		return file.exists() ? true:false;
+	}*/
+
+
+	public static int downToruria(){
+		/*		//保存教程到文件
+		file_totural = new File(rootDir+"/"+name+".html");
+		if(file_totural.exists()){
+			file_totural.delete();
+		}
+		BufferedOutputStream bw_totural = new BufferedOutputStream(new FileOutputStream(file_totural,true));
+		byte[] byt = EntityUtils.toByteArray(httpEntity);
+		bw_totural.write(byt);
+		bw_totural.close();*/
+		return 0;
+	}
+
+	/**
+	 * 下载音频文件
+	 * @param name
+	 * @param url
+	 * @param dirPath
+	 * @return
+	 * @throws IOException
+	 */
+	public static int downAudio(String name,String url,String dirPath) throws IOException {
+		File file_audio = null;
+
+		URL url_instance = new URL(url);
+		HttpURLConnection  httpsURLConn = (HttpURLConnection) url_instance.openConnection();
+		httpsURLConn.setRequestProperty("Cookie", prop.getProperty("Cookie"));
+		httpsURLConn.setRequestProperty("User-Agent", prop.getProperty("User-Agent"));
+		if(200 == httpsURLConn.getResponseCode()){
+			httpsURLConn.connect();
+			file_audio = new File(dirPath+"伴奏-"+name+".mp3");
+			if(file_audio.exists()){
+				file_audio.delete();
+			}
+			BufferedInputStream bw_audio = new BufferedInputStream(httpsURLConn.getInputStream());
+			FileOutputStream fos = new FileOutputStream(file_audio);
+			byte[] byt = new byte[1024*8];
+			int size = 0;
+			while ((size = bw_audio.read(byt))!=-1) {
+				fos.write(byt,0,size);
+			}
+			fos.flush();
+			fos.close();
+			bw_audio.close();
+			httpsURLConn.disconnect();
+			return 200;
+		}
+		return 0;
+	}
+
+	/**
+	 * 下载曲谱图片
+	 * @param name
+	 * @param url
+	 * @param dirPath
+	 * @param httpClient
+	 * @return
+	 * @throws IOException
+	 */
+	public static int downImge(String name,String url,String dirPath,HttpClient httpClient) throws IOException {
+		HttpGet httpGet = null;
+		HttpResponse response = null;
+		HttpEntity httpEntity = null;
+		File file_img = null;
+
+		httpGet = new HttpGet(url);
+		response = httpClient.execute(httpGet);
+		httpEntity = response.getEntity();
+		file_img = new File(dirPath+name+".png");
+
+		BufferedOutputStream bw_img = new BufferedOutputStream(new FileOutputStream(file_img,true));
+		byte[] byt = EntityUtils.toByteArray(httpEntity);
+
+		bw_img.write(byt);
+		bw_img.close();
+		EntityUtils.consume(httpEntity);
+
+		return file_img.exists()?200:0;
+	}
+
+
+	/**
+	 * 创建根目录
+	 * @param name
+	 */
+	public static void createRootDir(String name){
+		File rootDir = new File(rootPath+"/"+name+"/");
+		if(!rootDir.exists()){
+			rootDir.mkdir();
 		}
 	}
 
@@ -176,73 +284,27 @@ public class SpiderMain {
 		File file_img = null;
 		File file_audio = null;
 		String url = null;
-		
 		httpEntity = response.getEntity();
 		content = EntityUtils.toString(httpEntity,Charset.forName("utf-8"));
 		imageMap = RourceParseUtil.getInfo(content);
 		content = RourceParseUtil.getPageTotural(content);
+
         if(imageMap.get("id")==null || "".equals(imageMap.get("id"))){
         	EntityUtils.consume(httpEntity);
             return "0";
-        }else{
-    		String name = imageMap.get("id")+"-"+(imageMap.get("name").contains("/")?imageMap.get("name").replaceAll("/+", "-"):imageMap.get("name"));
-    		
-    		// 创建文件根目录
-    		File rootDir = new File(rootPath+"/"+name+"/");
-    		if(!rootDir.exists()){
-    			rootDir.mkdir();
-    		}
-    		
-//    		//保存教程到文件
-//      		file_totural = new File(rootDir+"/"+name+".html");
-//    		if(file_totural.exists()){
-//    			file_totural.delete();
-//    		}
-//    		BufferedOutputStream bw_totural = new BufferedOutputStream(new FileOutputStream(file_totural,true));
-//    		byte[] byt = EntityUtils.toByteArray(httpEntity);
-//    		bw_totural.write(byt);
-//    		bw_totural.close();
-    		
-    		// 获取到当前图片的地址 并重新发送请求
-    		url = imageMap.get("url");
-    		httpGet = new HttpGet(url);
-    		response = httpClient.execute(httpGet);
-    		httpEntity = response.getEntity();
-    		file_img = new File(rootDir+"/"+name+".png");
-    		if(file_img.exists()){
-    			file_img.delete();
-    		}
-    		BufferedOutputStream bw_img = new BufferedOutputStream(new FileOutputStream(file_img,true));
-    		byte[] byt = EntityUtils.toByteArray(httpEntity);
-    		bw_img.write(byt);
-    		bw_img.close();
-    		
-    		// 获取当前音频的地址 进行请求                                                                           
-    		url = imageMap.get("audio");
-    		URL url_instance = new URL(url);
-    		HttpURLConnection  httpsURLConn = (HttpURLConnection) url_instance.openConnection();
-    		httpsURLConn.setRequestProperty("Cookie", prop.getProperty("Cookie"));
-    		httpsURLConn.setRequestProperty("User-Agent", prop.getProperty("User-Agent"));
-    		if(200 == httpsURLConn.getResponseCode()){
-        		httpsURLConn.connect();
-        		file_audio = new File(rootDir+"/"+name+".mp3");
-        		if(file_audio.exists()){
-        			file_audio.delete();
-        		}
-        		BufferedInputStream bw_audio = new BufferedInputStream(httpsURLConn.getInputStream());
-        		FileOutputStream fos = new FileOutputStream(file_audio);
-        		byt = new byte[1024*8];
-        		int size = 0;
-        		while ((size = bw_audio.read(byt))!=-1) {
-        			fos.write(byt,0,size);
-        		}
-        		fos.flush();
-        		fos.close();
-        		bw_audio.close();
-        		httpsURLConn.disconnect();	
-    		}
         }
-		EntityUtils.consume(httpEntity);
+
+		String name = imageMap.get("id")+"-"+(imageMap.get("name").contains("/")?imageMap.get("name").replaceAll("/+", "-"):imageMap.get("name"));
+		String filePathString = rootDir+"/"+name+"/";
+        // 创建文件根目录
+		createRootDir(name);
+		// 获取到当前图片的地址 并重新发送请求
+		url = imageMap.get("url");
+		downImge(name,url,filePathString,httpClient);
+		// 获取当前音频的地址 进行请求
+		url = imageMap.get("audio");
+		downAudio(name,url,filePathString);
+		// 获取教程信息
 		return "200";
 	}
 	
