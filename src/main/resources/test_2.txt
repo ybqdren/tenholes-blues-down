@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>《看海的街道/更替的四季》 - 曲谱详情 - 蓝调口琴网</title>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+	<link rel="icon" href="/images/favicon1.ico" mce_href="/images/favicon1.ico" type="image/x-icon">
+	<meta name="csrf-param" content="_csrf-frontend">
+<meta name="csrf-token" content="NnuMYFdM46Ww0L6HuW8VVtPfcChIyqDc0Qlup3qMWq8DTvssPADQ7d2k0b7rOywPhboiUBCD-LGiaCnOHrsRgg==">
+        <meta name='keywords' content='蓝调口琴网,北京口琴课程,口琴购买'/>
+<meta name='description' content='本站教学由中国蓝调口琴演奏家张晓松老师整理编著，提供了丰富易懂的谱例，专业的音频示范和伴奏，图文结合的详细讲解，让你轻松掌握蓝调口琴的各项技巧。'/>
+<link href="/styles/base.css?v=1602390273" rel="stylesheet">
+<link href="/styles/style.css?v=1600870502" rel="stylesheet">
+<link href="/styles/swiper.min.css?v=1599013993" rel="stylesheet">        <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?2f7f7866ed2b0addd933476e1018bb2a";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+</head>
+<body>
+
+
+        <!--header-->
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+<!-- <script src="/js/SelectBox.min.js"></script> -->
+	<header class="header-wrap">
+		<input type="hidden" id="common_messageNum" value="0">
+        <input type="hidden" id="common_noticeNum" value="0">
+        <input type="hidden" id="common_num" value="0">
+		<h1 class="logo-center">
+			<a href="/"><img src="http://cache1.tenholes.com/pc/images/logo.jpg"/></a>
+		</h1>
+            		<div class="header-con">
+			<div class="wrapper">
+				<div class="nav-main clearfix">
+					<a href="/" class="">首页</a>
+					<a href="/lessons/index/" class="">教程</a>
+					<a href="/tabs/index/" class="active">曲谱</a>
+					<a href="/article/index/" class="">文章</a>
+					<a href="/news/shop/" class="">商店</a>
+					<a href="/news/vip/" class="">VIP</a>
+					<a href="/news/wechat/" class="">小程序</a>
+					<a href="/news/new/" class="">新手入口</a>
+				</div>
+				<div class="search-wrap">
+					<form action="/search/" method="post">
+						<!-- <div class="sea-type">
+							<input type="hidden" name="sea-type" data-sel-value value="0" />
+							<span data-sel-text>曲谱</span>
+							<ul class="sea-list" data-select>
+								<li data-option="0">曲谱</li>
+								<li data-option="1">教程</li>
+								<li data-option="2">文章</li>
+							</ul>
+						</div> -->
+						<input type="hidden" name="_csrf-frontend" id="_csrf" value="NnuMYFdM46Ww0L6HuW8VVtPfcChIyqDc0Qlup3qMWq8DTvssPADQ7d2k0b7rOywPhboiUBCD-LGiaCnOHrsRgg=="/>
+						<input type="hidden" name="sea-type" id="searchType" value="0" />
+						<div id="comSearch" class="search-box"></div>
+						<input type="text" name="search" id="search" />
+						<button type="submit"></button>
+					</form>
+				</div>
+
+				<div class="user-wrap clearfix">
+								<!--登录-->
+
+					<a id='userAvatar' href="/user/index/">
+						<div class="head-img-box" style="background: url(http://cache1.tenholes.com/userfiles/avatar1.png) no-repeat center center;background-size: cover;">
+
+
+						</div>
+					</a>
+					<a href="/logout?_csrf-frontend=NnuMYFdM46Ww0L6HuW8VVtPfcChIyqDc0Qlup3qMWq8DTvssPADQ7d2k0b7rOywPhboiUBCD-LGiaCnOHrsRgg==">退出</a>
+								</div>
+			</div>
+		</div>
+	</header>
+
+	<div id="login_container" style="display:none;"></div>
+	<!--register-->
+		<div class="lo-wrapper" id="register" style="display: none;">
+			<h4 class="lo-tit">注册新用户</h4>
+			<form action='/register/index/' onsubmit="return false" id="registerForm">
+				<input type="hidden" name="_csrf-frontend" id="_csrf" value="NnuMYFdM46Ww0L6HuW8VVtPfcChIyqDc0Qlup3qMWq8DTvssPADQ7d2k0b7rOywPhboiUBCD-LGiaCnOHrsRgg=="/>
+
+				<input type="text" placeholder="用户名" name="uname" class="lo-input" />
+				<input type="password" placeholder="输入密码 长度8-16位，必须包含数字、字母" name="pwd" class="lo-input" />
+				<input type="password" placeholder="再次确认密码" name="cpwd" class="lo-input" />
+				<!-- <input type="text" placeholder="手机" name="tel" class="lo-input" />
+				<div class="lo-code">
+					<input type="text" placeholder="请输入验证码" name="code" class="lo-input code CAPTCHABtn" data-status="0" />
+					<button type="button" class="lo-btn lo-codebtn CAPTCHABtn"  data-status="0" onclick="getRegisterCAPTCHA(this)">获取手机验证码</button>
+				</div> -->
+				<button type="button" class="lo-btn lo-submit" onclick="register()">注&nbsp;&nbsp;&nbsp;&nbsp;册</button>
+			</form>
+			<div class="lo-icon">
+				<img src="http://cache1.tenholes.com/pc/images/logo_wechat.png" onclick="WX()" />
+			</div>
+			<p class="lo-text" onclick="showLogin()">已有账户，直接登录</p>
+			<p class="lo-tap" onclick="closeLayerBox()">随便看看>></p>
+		</div>
+
+		<!--login-->
+		<div class="lo-wrapper" id="login" style="display: none;">
+			<h4 class="lo-tit">登录</h4>
+			<form onsubmit="return false" id="loginForm">
+				<input type="hidden" name="_csrf-frontend" id="_csrflogin" value="NnuMYFdM46Ww0L6HuW8VVtPfcChIyqDc0Qlup3qMWq8DTvssPADQ7d2k0b7rOywPhboiUBCD-LGiaCnOHrsRgg=="/>
+				<input type="text" placeholder="手机/用户名" name="loginuname" class="lo-input" />
+				<input type="password" placeholder="请输入密码" name="loginpwd" class="lo-input" />
+				<div class="lo-repass clearfix">
+					<label><input type="checkbox" name="remember">记住密码</label>
+					<p class="lo-forpass" onclick="showFindPassword()">忘记密码</p>
+				</div>
+				<button type="button" class="lo-btn lo-submit" onclick="login()">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+			</form>
+			<p class="lo-text" onclick="showRegister()">去注册</p>
+			<div class="lo-icon">
+				<img src="http://cache1.tenholes.com/pc/images/logo_wechat.png" onclick="WX()" />
+			</div>
+			<p class="lo-tap" onclick="closeLayerBox()">随便看看>></p>
+		</div>
+
+		<!--findPassword-->
+		<div class="lo-wrapper" id="findPassword" style="display: none;">
+			<h4 class="lo-tit">找回密码</h4>
+			<input type="hidden" name="_csrf-frontendfind" id="_csrffind" value="NnuMYFdM46Ww0L6HuW8VVtPfcChIyqDc0Qlup3qMWq8DTvssPADQ7d2k0b7rOywPhboiUBCD-LGiaCnOHrsRgg=="/>
+			<input type="text" placeholder="用户名(或已绑定的手机号)" name="login_username" id="login_username" class="lo-input" />
+			<input type="text" placeholder="手机" name="findtel" id="findtel" class="lo-input" />
+			<div class="lo-code">
+				<input type="text" placeholder="请输入验证码" name="findCode" class="lo-input code" />
+				<button type="button" class="lo-btn lo-codebtn  CAPTCHABtn"  data-status="0" onclick="getVerificationCodeSend(this)">获取手机验证码</button>
+			</div>
+			<button type="button" class="lo-btn lo-submit" onclick="nextStepPassword()">下一步</button>
+		</div>
+
+		<!--resetPassword-->
+		<div class="lo-wrapper" id="resetPassword" style="display: none;">
+			<h4 class="lo-tit">重置密码</h4>
+			<p>密码长度为8-16位，必须包含数字、字母。</p>
+			<input type="hidden" name="_csrf-frontendrset" id="_csrfrset" value="NnuMYFdM46Ww0L6HuW8VVtPfcChIyqDc0Qlup3qMWq8DTvssPADQ7d2k0b7rOywPhboiUBCD-LGiaCnOHrsRgg=="/>
+			<input type="password" placeholder="输入新密码" name="setpassword" class="lo-input" />
+			<input type="password" placeholder="再次输入新密码" name="reSetPassword" class="lo-input" />
+			<button type="button" class="lo-btn lo-submit" onclick="changePassword()">确&nbsp;&nbsp;&nbsp;&nbsp;认</button>
+		</div><input type="hidden" id="wx-title" value="《看海的街道/更替的四季》 - 曲谱详情 - 蓝调口琴网"/>
+<input type="hidden" id="wx-img" value="http://www.tenholes.com/images/logo.png"/>
+<input type="hidden" id="wx-con" value="本站教学由中国蓝调口琴演奏家张晓松老师整理编著，提供了丰富易懂的谱例，专业的音频示范和伴奏，图文结合的详细讲解，让你轻松掌握蓝调口琴的各项技巧。"/>
+<input type="hidden" id="wx-link" value="http://www.tenholes.com:80/tabs/view?id=308"/>
+<input type="hidden" name="_csrf-frontend" id="_csrf" value="NnuMYFdM46Ww0L6HuW8VVtPfcChIyqDc0Qlup3qMWq8DTvssPADQ7d2k0b7rOywPhboiUBCD-LGiaCnOHrsRgg=="/>
+		<input type="hidden" id="_uid" value="4413940"/>
+<!--music score-->
+        <input type="hidden" id="userName" value="erbin">
+	<div class="wrapper">
+		<div class="mt-bread"><span><a href="/tabs/index/">曲谱</a></span>  <a href="#">《看海的街道/更替的四季》</a></div>
+		<div class="mt-tit">
+			<span class="mt-type">布鲁斯口琴</span>
+			<p>《看海的街道/更替的四季》</p>
+
+							<span class="mt-col" id="collection" data-value="0">未收藏</span>
+					</div>
+				<div class="mt-subtit">曲谱</div>
+		<div class="mt-con">
+			<img src="http://cache1.tenholes.com/20200706/202007061425572342.jpg" />
+		</div>
+						<div class="mt-subtit">讲解</div>
+		<div class="mt-con">
+			<p><strong>把位</strong></p><p>本曲使用C调Paddy调音口琴第一把位演奏</p><p><img src="http://cache1.tenholes.com/editor/image/20200801/1596274747133749.jpg" title="1596274747133749.jpg" alt="第一把位PADDY自然唱名图@1x.jpg"/></p><p><br/></p><p><strong>技巧</strong></p><p>1、本曲主要使用单音演奏，单音演奏学习<a href="/lessons/view?id=63" target="_blank" style="color: rgb(79, 129, 189); text-decoration: underline;"><span style="color: rgb(79, 129, 189);">点击这里</span></a>。</p><p>2、本曲有用到一个4孔压半音，这个压半音的技巧<a href="/lessons/view?id=37" target="_blank" style="color: rgb(79, 129, 189); text-decoration: underline;"><span style="color: rgb(79, 129, 189);">点击这里</span></a>。</p><p><br/></p><p><strong>难点</strong></p><p>这首曲子的难点是快速的演奏，大家练习的时候可以把快的段落放慢速度演奏，熟练了之后再慢慢放快速度。</p>		</div>
+				<!--推荐曲谱-->
+				<div class="com-title clearfix">
+			<h4>推荐曲谱</h4>
+			<a href="/tabs/index/">全部</a>
+		</div>
+		<div class="wrapper clearfix">
+						<div class="mc-item">
+				<a href="/tabs/view?id=348"><img src="http://cache1.tenholes.com/20200706/202007061605066433.jpg">
+								</a>
+				<a href="/tabs/view?id=348" class="mc-itit">《一去不返的时光》from宫崎骏电影《红猪》</a>
+				<span>2018-03-02</span>
+			</div>
+						<div class="mc-item">
+				<a href="/tabs/view?id=358"><img src="http://cache1.tenholes.com/20200706/202007061601461815.jpg">
+								</a>
+				<a href="/tabs/view?id=358" class="mc-itit">《永远常在（Always with me）》from 千与千寻</a>
+				<span>2018-04-01</span>
+			</div>
+						<div class="mc-item">
+				<a href="/tabs/view?id=422"><img src="http://cache1.tenholes.com/20200706/202007061508054747.jpg">
+								</a>
+				<a href="/tabs/view?id=422" class="mc-itit">天空之城</a>
+				<span>2020-07-04</span>
+			</div>
+					</div>
+
+		<!--评论-->
+		<h3 class="cm-tit">评论</h3>
+		<div class="cm-wwrap clearfix">
+			<div class="cm-write clearfix">
+				<textarea id="commentCon" placeholder="我也来说说..."></textarea>
+				<div class="cm-wnum">还可以输入<span id="surplusCommentNum">50</span>个字</div>
+			</div>
+			<button type="button" class="cm-send" id="commentTar" data-type="1" data-id="308">发表</button>
+		</div>
+
+				<div id="commentWrap">
+						<div class="cm-item clearfix">
+				<a href="/user/tipinfo?fid=4466590">
+				<div class="cm-user" style="background: url(https://thirdwx.qlogo.cn/mmopen/vi_32/45y60xcP6BkibnbEFepnQjibicEDZmliawZHAMhCgYIKzrBfp1TicGEQpfSmlmcp1fMQ1gibic9I3H380PB303gGvIU4Q/132) no-repeat center center;background-size: cover;"></div>
+				</a>
+				<div class="cm-con">
+					<div class="cm-t clearfix">
+						<span class="cm-tu">A啊凛然风月</span>
+						<span class="cm-time">2021-07-06</span>
+						<span class="cm-tr replayTar" data-type="1" data-id="308" data-uid="4466590" data-cid="21038">回复</span>
+					</div>
+					<div class="cm-c">好听</div>
+									</div>
+			</div>
+						<div class="cm-item clearfix">
+				<a href="/user/tipinfo?fid=4447113">
+				<div class="cm-user" style="background: url(http://cache1.tenholes.com/userfiles/avatar2.png) no-repeat center center;background-size: cover;"></div>
+				</a>
+				<div class="cm-con">
+					<div class="cm-t clearfix">
+						<span class="cm-tu">haohaoonline</span>
+						<span class="cm-time">2021-05-16</span>
+						<span class="cm-tr replayTar" data-type="1" data-id="308" data-uid="4447113" data-cid="20670">回复</span>
+					</div>
+					<div class="cm-c">哈哈，超纲</div>
+										    <div class="cm-reply">@爱吃口琴的刷子：1压音是不是超纲了呀</div>
+									</div>
+			</div>
+						<div class="cm-item clearfix">
+				<a href="/user/tipinfo?fid=4402516">
+				<div class="cm-user" style="background: url(http://cache1.tenholes.com/userfiles/avatar/84/4402516_d583de18.png) no-repeat center center;background-size: cover;"></div>
+				</a>
+				<div class="cm-con">
+					<div class="cm-t clearfix">
+						<span class="cm-tu">爱吃口琴的刷子</span>
+						<span class="cm-time">2021-04-07</span>
+						<span class="cm-tr replayTar" data-type="1" data-id="308" data-uid="4402516" data-cid="20430">回复</span>
+					</div>
+					<div class="cm-c">1压音是不是超纲了呀</div>
+									</div>
+			</div>
+						<div class="cm-item clearfix">
+				<a href="/user/tipinfo?fid=4384269">
+				<div class="cm-user" style="background: url(http://cache1.tenholes.com/userfiles/avatar5.png) no-repeat center center;background-size: cover;"></div>
+				</a>
+				<div class="cm-con">
+					<div class="cm-t clearfix">
+						<span class="cm-tu">15952616993</span>
+						<span class="cm-time">2021-04-05</span>
+						<span class="cm-tr replayTar" data-type="1" data-id="308" data-uid="4384269" data-cid="20425">回复</span>
+					</div>
+					<div class="cm-c">好听，学</div>
+									</div>
+			</div>
+					</div>
+		<a class="wplane-btn" id='getMore'>更多</a>
+
+			</div>
+
+	<!-- audio begin -->
+	<div id="audioAnchor"></div>
+			<!-- 登录 -->
+		<input type="hidden" id="premission" value="1"/>
+		<input type="hidden" id="isVip" value="1"/>
+		<input type="hidden" id="freeTab" value="0"/>
+		<input type="hidden" id="audioSrc" value="http://authcdn.tenholes.com/20200826/202008261320226540.mp3?auth_key=1633096951-0-0-eb9482cb531afe19c86baebd8900a0d4"/>
+					<!-- 有权限则显示伴奏 -->
+			<input type="hidden" id="audioBzSrc" value="http://authcdn.tenholes.com/20200826/202008261320303901.mp3?auth_key=1633096951-0-0-0f62c17b76468bbd4f9c237afc42d712"/>
+				<audio src='http://authcdn.tenholes.com/20200826/202008261320226540.mp3?auth_key=1633096951-0-0-eb9482cb531afe19c86baebd8900a0d4' id="audio"></audio>
+		<div class="audio-bg audio-fixed" id="audioBox">
+			<div class="audio-wrap clearfix">
+				<i class="au-controls audioControls" id="audioControls" data-isPlay="0"></i>
+				<input type="range" min="0" max="100" value="0" id="audioRange" class="audio-range au-range">
+				<div class="au-time">
+					<span class="curr-time" id="currTime">0:00</span> /
+					<span class="max-time" id="maxTime">0:00</span>
+				</div>
+
+				<div class="audio-type">
+					<span class="audio-switch example " id="audioSwitch" data-specId="308" data-switch="0">
+						<i></i>
+					</span>
+					<span class="aswitch-text active">示范</span> |
+					<span class="aswitch-text">伴奏</span>
+				</div>
+				<a href="/down/index?id=308" class="audio-download" id="audioDownload">
+					<img src="http://cache1.tenholes.com/pc/images/i_download.png" />
+					下载伴奏
+				</a>
+
+				<!-- audio tip -->
+				<div class="audio-tip left-tip" id="audioTip"><i></i>
+					本曲谱只提供示范欣赏，获<br>得伴奏和解锁更多功能请：
+									</div>
+			</div>
+		</div>
+		<!-- audio end -->
+
+<script id="jqueryTmpl" type="text/x-jquery-tmpl">
+	<div class="cm-item clearfix">
+		<a href="/user/tipinfo?fid=${uid}">
+		<div class="cm-user" style="background: url(${avatar}) no-repeat center center;background-size: cover;"></div>
+		</a>
+		<div class="cm-con">
+			<div class="cm-t clearfix">
+				<span class="cm-tu">${nickname}</span>
+				<span class="cm-time">${ctime}</span>
+				<span class="cm-tr" data-type="1" data-id="308" data-uid="${uid}" data-cid="${id}">回复</span>
+			</div>
+			<div class="cm-c">${content}</div>
+			{{if remark}}
+				{{if remark['nickname'] != '' || remark['content'] != '' }}
+					<div class="">@${remark['nickname']}：${remark['content']}</div>
+				{{/if}}
+			{{/if}}
+		</div>
+	</div>
+</script>
+
+
+
+        <script src="/js/jquery-3.4.1.min.js?v=1599013993"></script>
+<script src="/js/SelectBox.min.js?v=1599013993"></script>
+<script src="/js/common.js?v=1610430898"></script>
+<script src="/layer/layer.js?v=1599013993"></script>
+<script src="/js/swiper.min.js?v=1599443022"></script>
+<script src="/js/jquery.tmpl.min.js?v=1599013993"></script>
+<script src="/js/audio.js?v=1600048531"></script>
+<script src="/js/no.js?v=1599013993"></script>
+<script>	var page = 1;
+	var type = 1;
+	var csrfToken = $('#_csrf').val();
+	var _uid = $("#_uid").val();
+	//收藏
+	$("#collection").click(function(){
+		var curr = $(this).attr("data-value");
+		if(_uid==0 || _uid=="" || _uid==null){
+			layer.msg("请登录后收藏");
+			return;
+		}
+		if(curr == 0){
+			$(this).addClass("active");
+			$(this).text("已收藏");
+			$(this).attr("data-value","1");
+			$.ajax({
+				type : "POST",
+				dataType:"json",
+				url : "/collection/add/",
+				data : {"_csrf-frontend":csrfToken,"id":308 ,"type":type },
+				success : function(result) {
+
+				}
+			});
+
+		}else{
+			$(this).removeClass("active");
+			$(this).text("未收藏");
+			$(this).attr("data-value","0");
+			$.ajax({
+				type : "POST",
+				dataType:"json",
+				url : "/collection/del/",
+				data : {"_csrf-frontend":csrfToken,"id":308 ,"type":type },
+				success : function(result) {
+					if(result.errcode == '200'){
+
+					}
+				}
+			});
+
+		}
+	});
+	//下拉刷新
+        $("#getMore").click(function(){
+            page = page + 1;
+            $.ajax({
+	        type : "POST",
+	        dataType:"json",
+	        url : "/comment/ajax/",
+	        data : {"_csrf-frontend":csrfToken,"id":308 ,"type":type ,"num":4,"page": page},
+	        success : function(result) {
+                    console.log(result);
+                    if(result.length > 0){
+                    	$("#jqueryTmpl").tmpl(result).appendTo('#commentWrap');
+						if(result.length < 4){
+							$("#getMore").hide();
+						}
+                    }else{
+                    	layer.msg("暂无更多内容");
+                    	$("#getMore").hide();
+                    }
+                }
+            });
+        });
+
+		function IsSafari(){
+			var ua = navigator.userAgent.toLowerCase();
+			if ( (/version\/([\d.]+).*safari/).test(ua) ) {
+				layer.msg("safari不能下载，推荐使用UC浏览器下载曲谱");
+			}else{
+				window.location.href="/down/index?id=308";
+			}
+		}
+    // //  消息提示框
+    // var common_messageNum = $('#common_messageNum').val();
+    // var common_noticeNum = $('#common_noticeNum').val();
+    // var common_num = $('#common_num').val();
+    // if(common_num == 1 && (common_messageNum > 0 ||  common_noticeNum > 0) ){
+	   //  layer.msg('有新消息，请注意查看！', {
+	   //    time: 0 //不自动关闭
+	   //    ,btn: ['查看', '关闭']
+	   //    ,yes: function(index){
+	   //      layer.close(index);
+	   //      window.location.href = "/user/index/";
+	   //    }
+	   //    ,success: function(layero){
+	   //      layero.find('.layui-layer-btn').css('text-align', 'center');
+	   //    },
+	   //  });
+    // }
+</script>    </body>
+    <!--footer-->
+	<footer class="footer">
+		<div class="wrapper-s clearfix">
+			<dl class="footer-nav">
+				<dt>关于我们</dt>
+				<dd><a href="/news/index/">网站介绍</a></dd>
+				<dd><a href="/news/join/">加入我们</a></dd>
+			</dl>
+			<dl class="footer-nav">
+				<dt>关注我们</dt>
+				<dd><a href="javascript:void(0);" onclick="previewImg(this,'/images/ewm.jpg')">官方微信</a></dd>
+				<dd><a target="_blank" href="https://weibo.com/u/2415743041">官方微博</a></dd>
+			</dl>
+			<dl class="footer-nav">
+				<dt>联系我们</dt>
+				<dd>E-mail：soharp@126.com</dd>
+			</dl>
+		</div>
+		<div class="wrapper footer-text">Copyright(c) 2009-2021 www.tenholes.com ALL Rights Reserved <a href="https://beian.miit.gov.cn">京ICP备15046512号</a></div>
+	</footer>
+</html>

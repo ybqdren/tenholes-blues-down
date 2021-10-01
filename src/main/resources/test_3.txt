@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>口琴曲谱 - 蓝调口琴网</title>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+	<link rel="icon" href="/images/favicon1.ico" mce_href="/images/favicon1.ico" type="image/x-icon">
+	<meta name="csrf-param" content="_csrf-frontend">
+<meta name="csrf-token" content="KA36GsYvmb6EriOxsia-YVNBQ8I8AXV0jfgKL0kFtqMdOI1WrWOq9unaTIjgcoc4BSQRumRILRn-mU1GLTL9jg==">
+        <meta name='keywords' content='蓝调口琴网,北京口琴课程,口琴购买'/>
+<meta name='description' content='本站教学由中国蓝调口琴演奏家张晓松老师整理编著，提供了丰富易懂的谱例，专业的音频示范和伴奏，图文结合的详细讲解，让你轻松掌握蓝调口琴的各项技巧。'/>
+<link href="/styles/base.css?v=1602390273" rel="stylesheet">
+<link href="/styles/style.css?v=1600870502" rel="stylesheet">
+<link href="/styles/swiper.min.css?v=1599013993" rel="stylesheet">        <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?2f7f7866ed2b0addd933476e1018bb2a";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+</head>
+<body>
+
+
+        <!--header-->
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+<!-- <script src="/js/SelectBox.min.js"></script> -->
+	<header class="header-wrap">
+		<input type="hidden" id="common_messageNum" value="0">
+        <input type="hidden" id="common_noticeNum" value="0">
+        <input type="hidden" id="common_num" value="0">
+		<h1 class="logo-center">
+			<a href="/"><img src="http://cache1.tenholes.com/pc/images/logo.jpg"/></a>
+		</h1>
+            		<div class="header-con">
+			<div class="wrapper">
+				<div class="nav-main clearfix">
+					<a href="/" class="">首页</a>
+					<a href="/lessons/index/" class="">教程</a>
+					<a href="/tabs/index/" class="active">曲谱</a>
+					<a href="/article/index/" class="">文章</a>
+					<a href="/news/shop/" class="">商店</a>
+					<a href="/news/vip/" class="">VIP</a>
+					<a href="/news/wechat/" class="">小程序</a>
+					<a href="/news/new/" class="">新手入口</a>
+				</div>
+				<div class="search-wrap">
+					<form action="/search/" method="post">
+						<!-- <div class="sea-type">
+							<input type="hidden" name="sea-type" data-sel-value value="0" />
+							<span data-sel-text>曲谱</span>
+							<ul class="sea-list" data-select>
+								<li data-option="0">曲谱</li>
+								<li data-option="1">教程</li>
+								<li data-option="2">文章</li>
+							</ul>
+						</div> -->
+						<input type="hidden" name="_csrf-frontend" id="_csrf" value="KA36GsYvmb6EriOxsia-YVNBQ8I8AXV0jfgKL0kFtqMdOI1WrWOq9unaTIjgcoc4BSQRumRILRn-mU1GLTL9jg=="/>
+						<input type="hidden" name="sea-type" id="searchType" value="0" />
+						<div id="comSearch" class="search-box"></div>
+						<input type="text" name="search" id="search" />
+						<button type="submit"></button>
+					</form>
+				</div>
+
+				<div class="user-wrap clearfix">
+								<!--登录-->
+
+					<a id='userAvatar' href="/user/index/">
+						<div class="head-img-box" style="background: url(http://cache1.tenholes.com/userfiles/avatar1.png) no-repeat center center;background-size: cover;">
+
+
+						</div>
+					</a>
+					<a href="/logout?_csrf-frontend=KA36GsYvmb6EriOxsia-YVNBQ8I8AXV0jfgKL0kFtqMdOI1WrWOq9unaTIjgcoc4BSQRumRILRn-mU1GLTL9jg==">退出</a>
+								</div>
+			</div>
+		</div>
+	</header>
+
+	<div id="login_container" style="display:none;"></div>
+	<!--register-->
+		<div class="lo-wrapper" id="register" style="display: none;">
+			<h4 class="lo-tit">注册新用户</h4>
+			<form action='/register/index/' onsubmit="return false" id="registerForm">
+				<input type="hidden" name="_csrf-frontend" id="_csrf" value="KA36GsYvmb6EriOxsia-YVNBQ8I8AXV0jfgKL0kFtqMdOI1WrWOq9unaTIjgcoc4BSQRumRILRn-mU1GLTL9jg=="/>
+
+				<input type="text" placeholder="用户名" name="uname" class="lo-input" />
+				<input type="password" placeholder="输入密码 长度8-16位，必须包含数字、字母" name="pwd" class="lo-input" />
+				<input type="password" placeholder="再次确认密码" name="cpwd" class="lo-input" />
+				<!-- <input type="text" placeholder="手机" name="tel" class="lo-input" />
+				<div class="lo-code">
+					<input type="text" placeholder="请输入验证码" name="code" class="lo-input code CAPTCHABtn" data-status="0" />
+					<button type="button" class="lo-btn lo-codebtn CAPTCHABtn"  data-status="0" onclick="getRegisterCAPTCHA(this)">获取手机验证码</button>
+				</div> -->
+				<button type="button" class="lo-btn lo-submit" onclick="register()">注&nbsp;&nbsp;&nbsp;&nbsp;册</button>
+			</form>
+			<div class="lo-icon">
+				<img src="http://cache1.tenholes.com/pc/images/logo_wechat.png" onclick="WX()" />
+			</div>
+			<p class="lo-text" onclick="showLogin()">已有账户，直接登录</p>
+			<p class="lo-tap" onclick="closeLayerBox()">随便看看>></p>
+		</div>
+
+		<!--login-->
+		<div class="lo-wrapper" id="login" style="display: none;">
+			<h4 class="lo-tit">登录</h4>
+			<form onsubmit="return false" id="loginForm">
+				<input type="hidden" name="_csrf-frontend" id="_csrflogin" value="KA36GsYvmb6EriOxsia-YVNBQ8I8AXV0jfgKL0kFtqMdOI1WrWOq9unaTIjgcoc4BSQRumRILRn-mU1GLTL9jg=="/>
+				<input type="text" placeholder="手机/用户名" name="loginuname" class="lo-input" />
+				<input type="password" placeholder="请输入密码" name="loginpwd" class="lo-input" />
+				<div class="lo-repass clearfix">
+					<label><input type="checkbox" name="remember">记住密码</label>
+					<p class="lo-forpass" onclick="showFindPassword()">忘记密码</p>
+				</div>
+				<button type="button" class="lo-btn lo-submit" onclick="login()">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+			</form>
+			<p class="lo-text" onclick="showRegister()">去注册</p>
+			<div class="lo-icon">
+				<img src="http://cache1.tenholes.com/pc/images/logo_wechat.png" onclick="WX()" />
+			</div>
+			<p class="lo-tap" onclick="closeLayerBox()">随便看看>></p>
+		</div>
+
+		<!--findPassword-->
+		<div class="lo-wrapper" id="findPassword" style="display: none;">
+			<h4 class="lo-tit">找回密码</h4>
+			<input type="hidden" name="_csrf-frontendfind" id="_csrffind" value="KA36GsYvmb6EriOxsia-YVNBQ8I8AXV0jfgKL0kFtqMdOI1WrWOq9unaTIjgcoc4BSQRumRILRn-mU1GLTL9jg=="/>
+			<input type="text" placeholder="用户名(或已绑定的手机号)" name="login_username" id="login_username" class="lo-input" />
+			<input type="text" placeholder="手机" name="findtel" id="findtel" class="lo-input" />
+			<div class="lo-code">
+				<input type="text" placeholder="请输入验证码" name="findCode" class="lo-input code" />
+				<button type="button" class="lo-btn lo-codebtn  CAPTCHABtn"  data-status="0" onclick="getVerificationCodeSend(this)">获取手机验证码</button>
+			</div>
+			<button type="button" class="lo-btn lo-submit" onclick="nextStepPassword()">下一步</button>
+		</div>
+
+		<!--resetPassword-->
+		<div class="lo-wrapper" id="resetPassword" style="display: none;">
+			<h4 class="lo-tit">重置密码</h4>
+			<p>密码长度为8-16位，必须包含数字、字母。</p>
+			<input type="hidden" name="_csrf-frontendrset" id="_csrfrset" value="KA36GsYvmb6EriOxsia-YVNBQ8I8AXV0jfgKL0kFtqMdOI1WrWOq9unaTIjgcoc4BSQRumRILRn-mU1GLTL9jg=="/>
+			<input type="password" placeholder="输入新密码" name="setpassword" class="lo-input" />
+			<input type="password" placeholder="再次输入新密码" name="reSetPassword" class="lo-input" />
+			<button type="button" class="lo-btn lo-submit" onclick="changePassword()">确&nbsp;&nbsp;&nbsp;&nbsp;认</button>
+		</div><input type="hidden" id="wx-title" value="口琴曲谱 - 蓝调口琴网"/>
+<input type="hidden" id="wx-img" value="http://www.tenholes.com/images/logo.png"/>
+<input type="hidden" id="wx-con" value="本站教学由中国蓝调口琴演奏家张晓松老师整理编著，提供了丰富易懂的谱例，专业的音频示范和伴奏，图文结合的详细讲解，让你轻松掌握蓝调口琴的各项技巧。"/>
+<input type="hidden" id="wx-link" value="http://www.tenholes.com:80/tabs/index/"/>
+<!--music score-->
+	<div class="search-main">
+		<form action="/tabs/search/" method="get">
+			<input type="text" name='s' placeholder="输入你要查找的曲谱关键词" />
+			<button type="submit"></button>
+		</form>
+	</div>
+	<div class="wrapper class-bg">
+		<ul class="class-con clearfix">
+			<li>
+				<a href="/tabs/catelist?id=1">
+					<img src="http://cache1.tenholes.com/pc/images/i_blues.png" />
+					布鲁斯口琴<br><span>bluesharp tabs</span>
+				</a>
+			</li>
+			<li>
+				<a href="/tabs/catelist?id=0">
+					<img src="http://cache1.tenholes.com/pc/images/i_chro.png" />
+					半音阶口琴<br><span>chro-harmonica tabs</span>
+				</a>
+			</li>
+			<li>
+				<a href="/tabs/search/">
+					<img src="http://cache1.tenholes.com/pc/images/i_c6.png" />
+					全部曲谱<br><span>all tabs</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="wrapper com-title clearfix">
+		<h4>最新曲谱  NEW！</h4>
+		<a href="/tabs/search?action=new">全部</a>
+	</div>
+	<div class="wrapper clearfix">
+            		<div class="mc-item">
+
+							<a href="/tabs/view?id=657">
+						<img src="http://cache1.tenholes.com/20210914/202109141230199227.jpg">
+
+                        </a>
+							<a href="/tabs/view?id=657" class="mc-itit">
+
+
+			约定（周蕙）</a>
+			<span>2021-09-14</span>
+		</div>
+            		<div class="mc-item">
+
+							<a href="/tabs/view?id=656">
+						<img src="http://cache1.tenholes.com/20210911/202109111841508466.jpg">
+
+                        </a>
+							<a href="/tabs/view?id=656" class="mc-itit">
+
+
+			Yellow（Coldplay）</a>
+			<span>2021-09-11</span>
+		</div>
+            		<div class="mc-item">
+
+							<a href="/tabs/view?id=655">
+						<img src="http://cache1.tenholes.com/20210910/202109101804348684.jpg">
+
+                        </a>
+							<a href="/tabs/view?id=655" class="mc-itit">
+
+
+			new boy（朴树）</a>
+			<span>2021-09-10</span>
+		</div>
+            		<div class="mc-item">
+
+							<a href="/tabs/view?id=654">
+						<img src="http://cache1.tenholes.com/20210831/202108311115313593.jpg">
+
+                        </a>
+							<a href="/tabs/view?id=654" class="mc-itit">
+
+
+			别了夏天</a>
+			<span>2021-08-31</span>
+		</div>
+            		<div class="mc-item">
+
+							<a href="/tabs/view?id=653">
+						<img src="http://cache1.tenholes.com/20210831/202108311114269968.jpg">
+
+                        </a>
+							<a href="/tabs/view?id=653" class="mc-itit">
+
+
+			被遗忘的时光</a>
+			<span>2021-08-31</span>
+		</div>
+            	</div>
+	<div class="wrapper com-title clearfix">
+		<h4>最热曲谱 HOT！</h4>
+		<a href="/tabs/search?action=hot">全部</a>
+	</div>
+	<div class="wrapper clearfix">
+             		<div class="mc-item">
+							<a href="/tabs/view?id=30">
+						<img src="http://cache1.tenholes.com/20200706/202007061630167775.jpg">
+                                                            <span class="free"></span>
+
+                        </a>
+							<a href="/tabs/view?id=30" class="mc-itit">
+						送别</a>
+			<span>2010-03-14</span>
+		</div>
+            		<div class="mc-item">
+							<a href="/tabs/view?id=421">
+						<img src="http://cache1.tenholes.com/20200706/202007061513022905.jpg">
+                                                            <span class="free"></span>
+
+                        </a>
+							<a href="/tabs/view?id=421" class="mc-itit">
+						Mojito（周杰伦）</a>
+			<span>2020-06-20</span>
+		</div>
+            		<div class="mc-item">
+							<a href="/tabs/view?id=410">
+						<img src="http://cache1.tenholes.com/20200706/202007061551412935.jpg">
+                                                            <span class="free"></span>
+
+                        </a>
+							<a href="/tabs/view?id=410" class="mc-itit">
+						《我和我的祖国》</a>
+			<span>2019-09-25</span>
+		</div>
+            		<div class="mc-item">
+							<a href="/tabs/view?id=27">
+						<img src="http://cache1.tenholes.com/20200706/202007061637532222.jpg">
+
+                        </a>
+							<a href="/tabs/view?id=27" class="mc-itit">
+						Down By The Sally Gardens（爱尔兰画眉）</a>
+			<span>2010-03-14</span>
+		</div>
+            		<div class="mc-item">
+							<a href="/tabs/view?id=549">
+						<img src="http://cache1.tenholes.com/20200926/202009261401456747.jpg">
+
+                        </a>
+							<a href="/tabs/view?id=549" class="mc-itit">
+						贝加尔湖畔</a>
+			<span>2020-09-26</span>
+		</div>
+            	</div>
+	<div class="wrapper com-title clearfix">
+		<h4>曲谱集</h4>
+		<!--<a href="">全部</a>-->
+	</div>
+	<div class="wrapper clearfix">
+            		<a href="/tabs/list?cid=10" class="les-box">
+			<img src="http://cache1.tenholes.com/20200704/202007041834422660.jpg">
+			<div class="les-int">
+				<p class="les-tit ellipsis">简单好听的布鲁斯口琴曲谱</p>
+				<p class="les-msg">使用简单的技巧一样可以演奏出来好听的旋律！事实上很多经典的乐曲对于口琴来说，技巧难度并不大，都可以使用简单的技巧来演奏。这本曲谱集中就为大家准备了大量好听又简单的乐曲。</p>
+				<span class="les-href">进入学习</span>
+			</div>
+		</a>
+            		<a href="/tabs/list?cid=21" class="les-box">
+			<img src="http://cache1.tenholes.com/20200912/202009121303289549.jpg">
+			<div class="les-int">
+				<p class="les-tit ellipsis">简单好听的半音阶口琴曲谱</p>
+				<p class="les-msg">本曲谱集为初学半音阶口琴的朋友们整理了大量简单又好听的曲子，把这些曲子练会了既可以练习技巧也能够陶冶情操，快来一起学起来吧。</p>
+				<span class="les-href">进入学习</span>
+			</div>
+		</a>
+            		<a href="/tabs/list?cid=19" class="les-box">
+			<img src="http://cache1.tenholes.com/20200704/202007041915267414.jpg">
+			<div class="les-int">
+				<p class="les-tit ellipsis">7孔布鲁斯口琴曲谱集</p>
+				<p class="les-msg">7孔的BabyFat，既可以胜任绝大多数布鲁斯音乐的演奏，也能够演奏很多优美的旋律，小巧的外形特别容易做出手哇音的特色，快看看这个小精灵可以演奏的曲子有多丰富！</p>
+				<span class="les-href">进入学习</span>
+			</div>
+		</a>
+            		<a href="/tabs/list?cid=22" class="les-box">
+			<img src="http://cache1.tenholes.com/20200908/202009081339068896.jpg">
+			<div class="les-int">
+				<p class="les-tit ellipsis">有难度的半音阶口琴曲谱集</p>
+				<p class="les-msg">这套曲谱中的曲目在音乐风格上更加多元化，其演奏难度也相应的提升了。学习这些风格多变的乐曲可以帮助你更加高效的提升演奏技巧。</p>
+				<span class="les-href">进入学习</span>
+			</div>
+		</a>
+            		<a href="/tabs/list?cid=11" class="les-box">
+			<img src="http://cache1.tenholes.com/20200704/202007041839544145.jpg">
+			<div class="les-int">
+				<p class="les-tit ellipsis">进阶布鲁斯口琴曲谱</p>
+				<p class="les-msg">掌握了一定的技巧后，就可以有更多的演奏选择性和表现力，可以演奏更多风格的乐曲，二把位上的blues、三把位上小调旋律……等等，快来检测一下自己的学习成果吧。</p>
+				<span class="les-href">进入学习</span>
+			</div>
+		</a>
+            		<a href="/tabs/list?cid=20" class="les-box">
+			<img src="http://cache1.tenholes.com/20200813/202008131743486342.jpg">
+			<div class="les-int">
+				<p class="les-tit ellipsis">12小节Blues曲谱</p>
+				<p class="les-msg">「12小节」是布鲁斯音乐风格音乐中最经典最常见的一种曲式结构，是学习Blues音乐必修的内容。这里为你准备了网站所有的12小节Blues曲谱。</p>
+				<span class="les-href">进入学习</span>
+			</div>
+		</a>
+            		<a href="/tabs/list?cid=12" class="les-box">
+			<img src="http://cache1.tenholes.com/20200704/202007041842448418.jpg">
+			<div class="les-int">
+				<p class="les-tit ellipsis">高阶布鲁斯口琴曲谱</p>
+				<p class="les-msg">布鲁斯口琴上的技巧还是挺多的，单音、压音、舌堵、超吹……学会综合运用这些技巧非常重要。不仅如此，学会把这些技巧运用在不同风格的音乐中，更为重要。</p>
+				<span class="les-href">进入学习</span>
+			</div>
+		</a>
+            		<a href="/tabs/list?cid=13" class="les-box">
+			<img src="http://cache1.tenholes.com/20200704/202007041851115390.jpg">
+			<div class="les-int">
+				<p class="les-tit ellipsis">Blues风格入门曲谱</p>
+				<p class="les-msg">用布鲁斯口琴演奏blues音乐时最适合不过的事儿了。很多同学都觉得blues音乐风格太“难”了，其实并非如此，音乐犹如语言，需要一步步来学习，这套曲谱中准备了大量简单易学的blues乐曲。</p>
+				<span class="les-href">进入学习</span>
+			</div>
+		</a>
+            		<a href="/tabs/list?cid=16" class="les-box">
+			<img src="http://cache1.tenholes.com/20200704/202007041903144152.jpg">
+			<div class="les-int">
+				<p class="les-tit ellipsis">ACG曲谱大集合</p>
+				<p class="les-msg">ACG的配乐中有很多好听的旋律，特别适合口琴演奏。这些耳熟能详的乐曲，无论是优美舒缓的，或是热血激昂的，都承载着我们成长的记忆。</p>
+				<span class="les-href">进入学习</span>
+			</div>
+		</a>
+            		<a href="/tabs/list?cid=17" class="les-box">
+			<img src="http://cache1.tenholes.com/20200704/202007041906514512.jpg">
+			<div class="les-int">
+				<p class="les-tit ellipsis">Paddy调音曲谱集</p>
+				<p class="les-msg">Paddy调音的口琴在第一把位上可以不使用压音便获得一个音色稳定完美的低音6，这使得它很适合演奏舒缓、优美的旋律。但是，Paddy调音的口琴可绝对不止可以这么用哦，开来学习下这些曲子吧。</p>
+				<span class="les-href">进入学习</span>
+			</div>
+		</a>
+            		<a href="/tabs/list?cid=14" class="les-box">
+			<img src="http://cache1.tenholes.com/20200704/202007041852493287.jpg">
+			<div class="les-int">
+				<p class="les-tit ellipsis">Blues风格高阶曲谱</p>
+				<p class="les-msg">能够将压音、舌堵等技巧充分应用在blues音乐中；能够熟练使用第二把位、第一把位、第三把位去演奏相应风格的blues，这才是真正掌握了blues音乐的演奏，快来学起来吧。</p>
+				<span class="les-href">进入学习</span>
+			</div>
+		</a>
+            		<a href="/tabs/list?cid=15" class="les-box">
+			<img src="http://cache1.tenholes.com/20200704/202007041855564777.jpg">
+			<div class="les-int">
+				<p class="les-tit ellipsis">经典流行的旋律</p>
+				<p class="les-msg">布鲁斯口琴除了演奏传统的Blues之外，还可以演奏一些流行旋律。但是，一定要注意技巧和把位的选择，让它的音色为音乐加分才是正确的。这套曲谱集就为大家甄选编配了一些适合布鲁斯口琴演奏的流行乐曲。</p>
+				<span class="les-href">进入学习</span>
+			</div>
+		</a>
+            		<a href="/tabs/list?cid=18" class="les-box">
+			<img src="http://cache1.tenholes.com/20200704/202007041913223676.jpg">
+			<div class="les-int">
+				<p class="les-tit ellipsis">Country调音曲谱集</p>
+				<p class="les-msg">Country调音的布鲁斯口琴，可以在第二把位上不需要超吹就获得一个完美音色的中音7，并且保留了二把位上压音的特点，这极大提升了第二把位上演奏旋律的能力，快来学学这些曲子吧。</p>
+				<span class="les-href">进入学习</span>
+			</div>
+		</a>
+            	</div>
+
+        <script src="/js/jquery-3.4.1.min.js?v=1599013993"></script>
+<script src="/js/SelectBox.min.js?v=1599013993"></script>
+<script src="/js/common.js?v=1610430898"></script>
+<script src="/layer/layer.js?v=1599013993"></script>
+<script src="/js/swiper.min.js?v=1599443022"></script>
+<script src="/js/jquery.tmpl.min.js?v=1599013993"></script>
+<script>    var musicNew = new Swiper('#musicNew', {
+	autoplay: true,
+	loop : true,
+	slidesPerView : 2.5,
+	spaceBetween : 15,
+	navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+})
+var musicHot = new Swiper('#musicHot', {
+	autoplay: true,
+	loop : true,
+	slidesPerView : 2.5,
+	spaceBetween : 15,
+	navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+})
+var musicFree = new Swiper('#musicFree', {
+	autoplay: true,
+	loop : true,
+	slidesPerView : 2.5,
+	spaceBetween : 15,
+	navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+})
+    // //  消息提示框
+    // var common_messageNum = $('#common_messageNum').val();
+    // var common_noticeNum = $('#common_noticeNum').val();
+    // var common_num = $('#common_num').val();
+    // if(common_num == 1 && (common_messageNum > 0 ||  common_noticeNum > 0) ){
+	   //  layer.msg('有新消息，请注意查看！', {
+	   //    time: 0 //不自动关闭
+	   //    ,btn: ['查看', '关闭']
+	   //    ,yes: function(index){
+	   //      layer.close(index);
+	   //      window.location.href = "/user/index/";
+	   //    }
+	   //    ,success: function(layero){
+	   //      layero.find('.layui-layer-btn').css('text-align', 'center');
+	   //    },
+	   //  });
+    // }
+</script>    </body>
+    <!--footer-->
+	<footer class="footer">
+		<div class="wrapper-s clearfix">
+			<dl class="footer-nav">
+				<dt>关于我们</dt>
+				<dd><a href="/news/index/">网站介绍</a></dd>
+				<dd><a href="/news/join/">加入我们</a></dd>
+			</dl>
+			<dl class="footer-nav">
+				<dt>关注我们</dt>
+				<dd><a href="javascript:void(0);" onclick="previewImg(this,'/images/ewm.jpg')">官方微信</a></dd>
+				<dd><a target="_blank" href="https://weibo.com/u/2415743041">官方微博</a></dd>
+			</dl>
+			<dl class="footer-nav">
+				<dt>联系我们</dt>
+				<dd>E-mail：soharp@126.com</dd>
+			</dl>
+		</div>
+		<div class="wrapper footer-text">Copyright(c) 2009-2021 www.tenholes.com ALL Rights Reserved <a href="https://beian.miit.gov.cn">京ICP备15046512号</a></div>
+	</footer>
+</html>
