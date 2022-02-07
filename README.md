@@ -1,5 +1,7 @@
 # tenholes-blues-down
 
+[![wakatime](https://wakatime.com/badge/user/e1661f37-5d4a-4a32-8cda-0f1d65c01658/project/06924fbf-6b72-4834-95fc-50e2ecec81e2.svg)](https://wakatime.com/badge/user/e1661f37-5d4a-4a32-8cda-0f1d65c01658/project/06924fbf-6b72-4834-95fc-50e2ecec81e2)
+
 Java下载蓝调口琴网（[http://www.tenholes.com](http://www.tenholes.com)）蓝调口琴琴谱、伴奏资源
 
 <br>
